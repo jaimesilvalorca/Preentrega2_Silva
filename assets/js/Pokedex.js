@@ -54,19 +54,26 @@ const buscarPokemon = () =>{
         }
     }
     return console.log(listaPokemon[consulta])
-
 }
 
+const contarPokemon = () =>{
+    contar = listaPokemon.length
+    return contar
+}
+
+
 if((pregunta == 'si') || (pregunta == 'Si') || (pregunta == 'SI')){
+    contador = contarPokemon()
+    alert(`Actualmente tiene ${contador} pokemones`)
     agregarNuevoPokemon()
+    console.log(listaPokemon)
 }
 else if((pregunta == 'no') || (pregunta == 'No') || (pregunta == 'NO')){
     buscarPokemon()
+    console.log(listaPokemon)
 }
 else{
     alert("Se va a cerrar la pestaña... Adios")
     window.close()
 }
-
-
 
